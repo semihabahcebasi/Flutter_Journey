@@ -4,6 +4,20 @@ Dart temellerinden sonra Flutter ile mobil uygulama geliştirme yolculuğum. Her
 
 Bu repoda, Flutter yolculuğumda öğrendiğim konuları ve günlük pratiklerimi takip ediyorum.
 
+## 🚀 Flutter Öğrenme Günlüğü - Gün 3: Mimari Temeller ve Bileşen (Component) Mantığı
+Dün kutulara kimlik kazandırmıştık, bugün ise o kimliği özgürleştiriyoruz! Kodun içinde boğulmak yerine, her bir parçayı kendi başına yaşayan, yönetilebilir ve tertemiz bir "Bileşen" (Component) haline getirmeyi deneyimledim. 🧱
+
+### 🧠 Bugünün Kazanımları
+**1. Fonksiyonel Bileşen Yapısı (compenentUse) 🧩**
+Kod kalabalığını build metodundan çıkarıp, işi uzmanına devretmeyi öğrendim:
+
+Kod Okunabilirliği: Karmaşık bir Container yapısını ayrı bir fonksiyon (Container compenentUse()) içine alarak, ana ağacı (children) tertemiz tuttum.
+
+Modülerlik: Bir tasarımı bir kez yazıp, ihtiyacım olan her yerde sadece ismini çağırarak kullanabilmenin (reusability) kapısını araladım.
+
+**💡 Kritik Not (Altın Kural)**
+Hata Engelleyici: Eğer bir BoxDecoration tanımladıysak, color parametresini dışarıda unutmak "Kırmızı Ekran" (Error) demektir! Renk, artık dekorasyonun sadık bir üyesidir ve onun parantezleri içinde yaşamalıdır. ⚠️
+
 ## 🚀 Flutter Öğrenme Günlüğü - Gün 2: Görsel Tasarım ve Etkileşim
 Dün kurduğumuz iskeletin üzerine bugün "görsel disiplin" ve "kullanıcı etkileşimi" katmanlarını ekledim. Artık sadece kutular dizmiyorum, onlara kimlik kazandırıyorum! 🎨
 
