@@ -5,11 +5,11 @@ Dart temellerinden sonra Flutter ile mobil uygulama geliştirme yolculuğum. Her
 ## 📚 İçindekiler (Günlük Notlar)
 Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirsiniz:
 
-* 📄 [Gün 1: Temeller ve Widget Yapısı](notes/gun_01.md)
-* 📄 [Gün 2: Görsel Tasarım ve Etkileşim](notes/gun_02.md)
-* 📄 [Gün 3: Mimari Temeller ve Bileşen Mantığı](notes/gun_03.md)
-* 📄 [Gün 4: Dosya Yapısı ve Widget Yönetimi](notes/gun_04.md)
-* 📄 [Gün 5: Sayfa Geçişleri ve Route Yönetimi](notes/gun_05.md)
+* 📄 [Gün 1: Temeller ve Widget Yapısı](calisma_projesi/notes/gun_01.md)
+* 📄 [Gün 2: Görsel Tasarım ve Etkileşim](calisma_projesi/notes/gun_02.md)
+* 📄 [Gün 3: Mimari Temeller ve Bileşen Mantığı](calisma_projesi/notes/gun_03.md)
+* 📄 [Gün 4: Dosya Yapısı ve Widget Yönetimi](calisma_projesi/notes/gun_04.md)
+* 📄 [Gün 5: Sayfa Geçişleri ve Route Yönetimi](calisma_projesi/notes/gun_05.md)
 
 ---
 *Bu gelişim günlüğü düzenli olarak güncellenmektedir.*
