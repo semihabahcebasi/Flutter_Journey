@@ -1,4 +1,4 @@
-import 'package:calisma_projesi/screeans/home_screen.dart';
+import 'package:calisma_projesi/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

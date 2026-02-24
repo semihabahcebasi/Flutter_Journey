@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:calisma_projesi/screeans/second_screen.dart';
+import 'package:calisma_projesi/screens/second_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
