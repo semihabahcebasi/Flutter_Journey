@@ -1,17 +1,15 @@
-# calisma_projesi
 
-A new Flutter project.
+# 📱 Flutter_Journey
+Dart temellerinden sonra Flutter ile mobil uygulama geliştirme yolculuğum. Her gün yeni bir widget, her gün yeni bir özellik! 🚀
 
-## Getting Started
+## 📚 İçindekiler (Günlük Notlar)
+Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirsiniz:
 
-This project is a starting point for a Flutter application.
+* 📄 [Gün 1: Temeller ve Widget Yapısı](notes/gun_01.md)
+* 📄 [Gün 2: Görsel Tasarım ve Etkileşim](notes/gun_02.md)
+* 📄 [Gün 3: Mimari Temeller ve Bileşen Mantığı](notes/gun_03.md)
+* 📄 [Gün 4: Dosya Yapısı ve Widget Yönetimi](notes/gun_04.md)
+* 📄 [Gün 5: Sayfa Geçişleri ve Route Yönetimi](notes/gun_05.md)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+*Bu gelişim günlüğü düzenli olarak güncellenmektedir.*
