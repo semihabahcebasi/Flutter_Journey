@@ -1,4 +1,4 @@
-# 📱 Flutter Çalışma Notları: Stack & Positioned Widget
+# 🚀 Gün 6:📱 Flutter Çalışma Notları: Stack & Positioned Widget
 Bu bölümde, widget'ları üst üste bindirmek ve bu widget'ların konumlarını hassas bir şekilde ayarlamak için kullanılan yapıları inceledik. 
 
 **1. Stack Widget**
