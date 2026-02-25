@@ -10,6 +10,7 @@ Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirs
 * 📄 [Gün 3: Mimari Temeller ve Bileşen Mantığı](notes/gun_03.md)
 * 📄 [Gün 4: Dosya Yapısı ve Widget Yönetimi](notes/gun_04.md)
 * 📄 [Gün 5: Sayfa Geçişleri ve Route Yönetimi](notes/gun_05.md)
+* 📄 [Gün 6: Stacked ve Positioned Widget](notes/gun_06.md)
 
 ---
 *Bu gelişim günlüğü düzenli olarak güncellenmektedir.*
