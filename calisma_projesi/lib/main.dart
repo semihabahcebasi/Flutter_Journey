@@ -11,6 +11,8 @@ class uygulamam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner:
+          false, // sol üstteki debug yazısını kaldırmak için
       theme: ThemeData(fontFamily: "MyFonts"),
       home: HomeScreen(),
     );

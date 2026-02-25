@@ -1,3 +1,4 @@
+import 'package:calisma_projesi/screens/sayac_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:calisma_projesi/screens/second_screen.dart';
 
@@ -36,6 +37,16 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text("ikinci ekrana git"),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SayacScreen()),
+                );
+              },
+              child: Text("sayac ekranına git"),
             ),
 
             Image(
