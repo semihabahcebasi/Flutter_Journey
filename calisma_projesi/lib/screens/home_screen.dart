@@ -1,10 +1,17 @@
 import 'package:calisma_projesi/screens/sayac_screen.dart';
+import 'package:calisma_projesi/screens/veri_iki.dart';
 import 'package:flutter/material.dart';
 import 'package:calisma_projesi/screens/second_screen.dart';
+import 'package:calisma_projesi/screens/veri_listeleme.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +50,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SayacScreen()),
+                  MaterialPageRoute(builder: (context) => sayac_screen()),
                 );
               },
               child: Text("sayac ekranına git"),
@@ -59,28 +66,34 @@ class HomeScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                print("butona tıklandı"); // konsola verir
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => VeriListeleme()),
+                );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 30, 142, 233),
-              ), // buton arka plan rengini düzenleme
               child: Text(
-                "Tıkla",
+                "Veri listeleme ekranına git",
                 style: TextStyle(
                   fontWeight: FontWeight.w900,
                   color: const Color.fromARGB(255, 179, 11, 11),
                 ),
               ),
             ),
-            TextButton(
-              // text butonun arka planı olmaz, sadece yazı olur
+
+            ElevatedButton(
               onPressed: () {
-                print("text butona tıklandı");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => veri_iki()),
+                );
               },
-              style: TextButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 210, 253, 40),
-              ), // text butonun arka plan rengini düzenleme
-              child: Text("Text butona tıkla"),
+              child: Text(
+                "Veri listeleme 2 ekranına git",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: const Color.fromARGB(255, 179, 11, 11),
+                ),
+              ),
             ),
 
             Icon(
