@@ -12,6 +12,8 @@ Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirs
 * 📄 [Gün 5: Sayfa Geçişleri ve Route Yönetimi](calisma_projesi/notes/gun_05.md)
 * 📄 [Gün 6: Stacked ve Positioned Widget](calisma_projesi/notes/gun_06.md)
 * 📄 [Gün 7: State Yönetimi, Listeleme ve Kullanıcı Etkileşimi](calisma_projesi/notes/gun_07.md)
+* 📄 [Gün 8: ListView, Expand ve Model Yapısı ](calisma_projesi/notes/gun_08.md)
+
 
 
 ---
