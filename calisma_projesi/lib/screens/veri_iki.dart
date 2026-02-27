@@ -38,21 +38,37 @@ class _VeriIkiState extends State<veri_iki> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.separated(
-        //listviev.builderin farklı biri de seperatorlu olanıdır
-        itemCount: elemanlar.length,
-        itemBuilder: (context, index) => ListTile(
-          title: Text("eleman: ${index + 1}"),
-          subtitle: Text(elemanlar[index]),
-          trailing: Icon(
-            Icons.arrow_forward_ios,
-          ), // satır sonuna gidiş ikonu ekler
-          tileColor: Color.fromARGB(255, 155, 133, 159),
-        ),
-        separatorBuilder: (context, index) =>
-            const Divider(), // elemanlar arasına çizgi ekler
-      ),
-      /* ListView(
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.separated(
+              //listviev.builderin farklı biri de seperatorlu olanıdır
+              itemCount: elemanlar.length,
+              itemBuilder: (context, index) => ListTile(
+                title: Text("eleman: ${index + 1}"),
+                subtitle: Text(elemanlar[index]),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                ), // satır sonuna gidiş ikonu ekler
+                tileColor: Color.fromARGB(255, 155, 133, 159),
+              ),
+              separatorBuilder: (context, index) =>
+                  const Divider(), // elemanlar arasına çizgi ekler
+            ),
+          ),
+
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("sayac ekranından çık :) "),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 215, 218, 26),
+            ),
+          ),
+        ],
+
+        /* ListView(
         children: [
           // Geri dönme butonu
           Padding(
@@ -84,6 +100,7 @@ class _VeriIkiState extends State<veri_iki> {
               .toList(),
         ],
       ),*/
+      ),
     );
   }
 }

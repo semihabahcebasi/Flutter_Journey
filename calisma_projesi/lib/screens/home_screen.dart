@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondScreen()),
+                  MaterialPageRoute(builder: (context) => second_screen()),
                 );
               },
               child: Text("ikinci ekrana git"),
