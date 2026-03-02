@@ -3,6 +3,7 @@ import 'package:calisma_projesi/screens/veri_iki.dart';
 import 'package:flutter/material.dart';
 import 'package:calisma_projesi/screens/second_screen.dart';
 import 'package:calisma_projesi/screens/veri_listeleme.dart';
+import 'package:calisma_projesi/screens/menu_box_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -57,11 +58,27 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             Image(
-              image: AssetImage("assets/image/firuzan.jpeg"),
+              image: AssetImage("assets/image/ZENITSU.jpg"),
               width: 500,
               height: 400,
 
               //opacity: AlwaysStoppedAnimation(0.4),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuBoxScreen()),
+                );
+              },
+              child: Text(
+                "Menü kutusu ekranına git",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: const Color.fromARGB(255, 179, 11, 11),
+                ),
+              ),
             ),
 
             ElevatedButton(
