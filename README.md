@@ -14,6 +14,10 @@ Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirs
 * 📄 [Gün 7: State Yönetimi, Listeleme ve Kullanıcı Etkileşimi](calisma_projesi/notes/gun_07.md)
 * 📄 [Gün 8: ListView, Expand ve Model Yapısı ](calisma_projesi/notes/gun_08.md)
 * 📄 [Gün 8 Plus: Null Safety ve Koşullu Widget](calisma_projesi/notes/gun_08_plus.md)
+* 📄 [Gün 9: Flutter Proje Yönetimi ve Ortam Düzenleme](calisma_projesi/notes/gun_09.md)
+* 📄 [Gün 9 plus: Flutter : JSON Verisi Okuma ve Temel Kavramlar](calisma_projesi/notes/gun_09_plus.md)
+* 📄 [Gün 10: Debugging Approach – Network Image Rendering Issue](calisma_projesi/notes/gun_10.md)
+  
 
 
 
