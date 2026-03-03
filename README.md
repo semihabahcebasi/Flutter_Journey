@@ -17,7 +17,9 @@ Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirs
 * 📄 [Gün 9: Flutter Proje Yönetimi ve Ortam Düzenleme](calisma_projesi/notes/gun_09.md)
 * 📄 [Gün 9 plus: Flutter : JSON Verisi Okuma ve Temel Kavramlar](calisma_projesi/notes/gun_09_plus.md)
 * 📄 [Gün 10: Debugging Approach – Network Image Rendering Issue](calisma_projesi/notes/gun_10.md)
-  
+* 📄 [Gün 10 plus:  Teknik Analiz: JSON Veri Güncelleme ve Görsel Önbellek (Cache) Sorunları](calisma_projesi/notes/gun_10_plus.md)
+* 📄 [Gün 11: Dinamik Filtreleme ve State Yönetimi](calisma_projesi/notes/gun_11.md)
+
 
 
 
