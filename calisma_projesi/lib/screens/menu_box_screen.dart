@@ -1,12 +1,8 @@
-import 'dart:convert'; // json verisiyle çalışmak için dart:convert kütüphanesini kullanırız
+import 'dart:convert';
 
-import 'package:calisma_projesi/models/urunler_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-// bu sayfada yan yana ürünlerimiizin kategorileri olacak
-// ve sayfanın kalanında alt alata ürünlerimiz oalcak
-// ve yukarıdaki kategorilere tıklandığında o kategoriye ait ürünler alt alta gelecek(filtrelenecek)
+import 'package:calisma_projesi/models/urunler_model.dart';
 
 class MenuBoxScreen extends StatefulWidget {
   const MenuBoxScreen({super.key});
@@ -17,95 +13,96 @@ class MenuBoxScreen extends StatefulWidget {
 
 class _MenuBoxScreenState extends State<MenuBoxScreen> {
   UrunlerModel? _veriler;
+  List<Urun> _urunler = [];
 
   void _loadData() async {
-    final dataString = await rootBundle.loadString(
-      'assets/files/data.json',
-    ); //okurken rootBundle kullanırız
-    // veriyi okuduk ama string tipinde okuyo. biz bunu json a çevirelim ki içindeki verilere erişebilelim
-    final dataJson = jsonDecode(
-      dataString,
-    ); // jsonDecode ile stringi json a çevirdik , encode ise jsun u stringe çevirir.
-    //UrunlerModel(id, kategori, isim, resim);
-    _veriler = UrunlerModel.fromJson(dataJson);
-    //verimiz güncellendiyse ve ekranda göstermek istiyorsak setState yapmamız gerekir
-    setState(() {});
+    final dataString = await rootBundle.loadString('assets/files/data.json');
+    final dataJson = jsonDecode(dataString);
 
-    /*Urun.fromJson({
-      "id": 16,
-      "kategori": 3,
-      "isim": "Süt",
-      "resim": "assets/image/süt.png",
-    });*/
+    _veriler = UrunlerModel.fromJson(dataJson);
+    _urunler = _veriler!.urunler;
+    setState(() {});
   }
 
-  // uygulama çalıştığında json ı nasıl gösteririrz.
+  void _filterData(int id) {
+    _urunler = _veriler!.urunler
+        .where((verilerEleman) => verilerEleman.kategori == id)
+        .toList();
+
+    setState(() {});
+  }
+
+  void _resetFilter() {
+    _urunler = _veriler!.urunler;
+    setState(() {});
+  }
+
   @override
   void initState() {
-    super.initState();
     _loadData();
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _veriler == null
-            ? const Text("data yükleniyor")
-            : Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _kategoriView(veriler: _veriler), // vieww oluşturduk
-                  ListView.separated(
-                    shrinkWrap:
-                        true, // kendi boyutunu çok fazla kaplamasın diye kullanırız
-                    itemCount: _veriler!.urunler.length,
-                    itemBuilder: (context, index) {
-                      final Urun urun = _veriler!.urunler[index];
-                      return ListTile(
-                        leading: Image.network(
-                          urun.resim,
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                        title: Text(urun.isim),
-                      );
-                    },
-                    separatorBuilder: (context, index) => Divider(height: 10),
-                  ),
-                ],
-              ),
-      ),
+      body: _veriler == null
+          ? const Center(child: Text('Yükleniyor'))
+          : Column(
+              children: [
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: _resetFilter,
+                  child: const Text('Tüm Ürünler'),
+                ),
+                const SizedBox(height: 10),
+                _kategorilerView(),
+                const SizedBox(height: 10),
+                // Burada Expanded ekliyoruz
+                Expanded(child: _urunlerView()),
+              ],
+            ),
     );
   }
-}
 
-class _kategoriView extends StatelessWidget {
-  const _kategoriView({super.key, required UrunlerModel? veriler})
-    : _veriler = veriler;
+  ListView _urunlerView() {
+    return ListView.separated(
+      shrinkWrap: true,
+      itemCount: _urunler.length,
+      itemBuilder: (context, index) {
+        final Urun urun = _urunler[index];
+        return ListTile(
+          leading: Image.network(
+            urun.resim,
+            width: 50,
+            height: 50,
+            fit: BoxFit.cover,
+          ),
+          title: Text(urun.isim),
+        );
+      },
+      separatorBuilder: (context, index) => const Divider(height: 10),
+    );
+  }
 
-  final UrunlerModel? _veriler;
-
-  @override
-  Widget build(BuildContext context) {
+  Row _kategorilerView() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(
-        _veriler!.kategoriler.length,
-        (index) => GestureDetector(
-          onTap: () {},
+      children: List.generate(_veriler!.kategoriler.length, (index) {
+        final kategori = _veriler!.kategoriler[index];
+        return GestureDetector(
+          onTap: () => _filterData(kategori.id),
           child: Container(
-            padding: EdgeInsets.all(8),
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.all(8),
+            margin: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: const Color.fromRGBO(172, 68, 111, 1),
+              color: Colors.black12,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Text(_veriler!.kategoriler[index].isim),
+            child: Text(kategori.isim),
           ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }

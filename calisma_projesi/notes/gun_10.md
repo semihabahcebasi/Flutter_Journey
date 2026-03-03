@@ -1,4 +1,4 @@
-# 🔍 Debugging Approach – Network Image Rendering Issue
+# 🚀 Gün 10🔍 Debugging Approach – Network Image Rendering Issue
 ### Problem Description
 
 Flutter uygulamasında JSON’dan yüklenen ürün verileri ListView içerisinde başarıyla görüntüleniyordu. Ancak *Image.network()* ile çekilen görseller ekranda render edilmiyordu.
