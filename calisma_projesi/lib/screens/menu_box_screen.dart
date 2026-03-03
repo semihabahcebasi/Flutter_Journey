@@ -51,35 +51,39 @@ class _MenuBoxScreenState extends State<MenuBoxScreen> {
     return Scaffold(
       body: Center(
         child: _veriler == null
-            ? Text("data yükleniyor")
+            ? const Text("data yükleniyor")
             : Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   _kategoriView(veriler: _veriler), // vieww oluşturduk
                   ListView.separated(
-                  shrinkWrap: true, // kendi boyutunu çok fazla kaplamasın diye kullanırız
-                  itemCount: _veriler!.urunler.length,
-                  itemBuilder:(context,index){
-
-                    
-                        final Urun urun = _veriler!.urunler[index];
-                        return ListTile(
-                          title: Text(urun.isim),
-                          leading: Image.network(urun.resim, width: 100, height: 100,fit: BoxFit.cover,),
-                        );
-                      },
-                      )
+                    shrinkWrap:
+                        true, // kendi boyutunu çok fazla kaplamasın diye kullanırız
+                    itemCount: _veriler!.urunler.length,
+                    itemBuilder: (context, index) {
+                      final Urun urun = _veriler!.urunler[index];
+                      return ListTile(
+                        leading: Image.network(
+                          urun.resim,
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                        title: Text(urun.isim),
+                      );
+                    },
+                    separatorBuilder: (context, index) => Divider(height: 10),
+                  ),
                 ],
-            ),
+              ),
       ),
-    );          
+    );
+  }
 }
 
 class _kategoriView extends StatelessWidget {
-  const _kategoriView({
-    super.key,
-    required UrunlerModel? veriler,
-  }) : _veriler = veriler;
+  const _kategoriView({super.key, required UrunlerModel? veriler})
+    : _veriler = veriler;
 
   final UrunlerModel? _veriler;
 
