@@ -1,4 +1,4 @@
-# Flutter: JSON Verisini Modele Dönüştürme ve Listeleme Notları
+# 🚀 Gün 12📑Flutter: JSON Verisini Modele Dönüştürme ve Listeleme Notları
 Bu süreç 4 temel adımdan oluşur: Hazırlık, Model Oluşturma, Veriyi Okuma ve Arayüzde Göstermek.
 
 ## 1. Adım: Hazırlık ve Varlıkların (Assets) Tanımlanması
