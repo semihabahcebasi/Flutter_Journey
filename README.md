@@ -19,6 +19,7 @@ Aşağıdaki başlıklara tıklayarak o günün detaylı notlarına ulaşabilirs
 * 📄 [Gün 10: Debugging Approach – Network Image Rendering Issue](calisma_projesi/notes/gun_10.md)
 * 📄 [Gün 10 plus:  Teknik Analiz: JSON Veri Güncelleme ve Görsel Önbellek (Cache) Sorunları](calisma_projesi/notes/gun_10_plus.md)
 * 📄 [Gün 11: Dinamik Filtreleme ve State Yönetimi](calisma_projesi/notes/gun_11.md)
+* 📄 [Gün 12:JSON Verisini Modele Dönüştürme ve Listeleme Notları: Adım adım](calisma_projesi/notes/gun_12.md)
 
 
 
